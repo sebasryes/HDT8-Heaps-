@@ -1,3 +1,11 @@
+/**
+ * Universidad Del Valle de Guatemala
+ * @author Aaron Beltrán 21092
+ * @author Sebastian Reyes 21139
+ * Clase publica Vector heap
+ */
+
+package com.example;
 import java.util.Vector;
 
 
@@ -39,7 +47,7 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueueI<E> {
 	 * @return padre del nodo
 	 */
 	protected static int parent(int i)
-	// pre: 0 <= i < size
+	
 	{
 		return (i - 1) / 2;
 	}
@@ -62,7 +70,7 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueueI<E> {
 	 * @return el indice del hijo derecho
 	 */
 	protected static int right(int i)
-	// pre: 0 <= i < size
+	
 	{
 		return (2 * i + 1) + 1;
 	}
@@ -72,7 +80,7 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueueI<E> {
 	 * @param leaf
 	 */
 	protected void percolateUp(int leaf)
-	// pre: 0 <= leaf < size
+	
 	{
 		int parent = parent(leaf);
 		E value = data.get(leaf);
@@ -100,7 +108,7 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueueI<E> {
 	 * @param root
 	 */
 	protected void pushDownRoot(int root)
-	// pre: 0 <= root < size
+
 	{
 		int heapSize = data.size();
 		E value = data.get(root);
@@ -112,16 +120,16 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueueI<E> {
 								(data.get(childpos)) < 0)) {
 					childpos++;
 				}
-				// Assert: childpos indexes smaller of two children
+				
 				if ((data.get(childpos)).compareTo
 						(value) < 0) {
 					data.set(root, data.get(childpos));
-					root = childpos; // keep moving down
-				} else { // found right location
+					root = childpos; 
+				} else { 
 					data.set(root, value);
 					return;
 				}
-			} else { // at a leaf! insert and halt
+			} else { 
 				data.set(root, value);
 				return;
 			}

@@ -1,3 +1,10 @@
+package com.example;
+/**
+ * Universidad Del Valle de Guatemala
+ * @author Aaron Beltrán 21092
+ * @author Sebastian Reyes 21139
+ * Clase principal Main
+ */
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -11,7 +18,7 @@ public class Main {
     public static void main(String[] args) {
         Vector listaPacientes = new Vector<Paciente>();
 
-        //Para leer el archivo
+        //Se realiza la lectura del archivo txt
         Scanner read = new Scanner(System.in);
         String archivoNombre;
         System.out.println("Ingrese el nombre del archivo");
@@ -37,10 +44,7 @@ public class Main {
         }
 
         VectorHeap colaPacientes = new VectorHeap(listaPacientes);
-        //NO SE CUAL DE LAS DOS USAR
-        //VectorHeapC colaPacientes = new VectorHeapC(listaPacientes);
-        //PriorityQueue colaPacientes = new PriorityQueue(listaPacientes);
-
+       
         Boolean continuar = true;
 
         while (continuar) {

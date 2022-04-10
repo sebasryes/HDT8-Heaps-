@@ -1,7 +1,14 @@
+package com.example;
+/**
+ * Universidad Del Valle de Guatemala
+ * @author Aaron Beltrán 21092
+ * @author Sebastian Reyes 21139
+ * Clase publica paciente
+ */
 public class Paciente implements Comparable<Paciente> {
     String nombre;
     String sintoma;
-    String codigo; //A a E
+    String codigo; //A a D
 
     Paciente (String nombre, String sintoma, String codigo) {
         this.nombre = nombre;
